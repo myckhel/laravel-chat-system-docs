@@ -1,9 +1,12 @@
+// const theme = require('prism-react-renderer/themes/github')
+const darkTheme = require('prism-react-renderer/themes/dracula')
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Laravel Chat System',
   tagline: 'Simple Laravel Chat Library',
   url: 'https://myckhel.github.io',
-  baseUrl: '/laravel-chat-system-docs/',
+  baseUrl: '/laravel-chat-system/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -11,14 +14,16 @@ module.exports = {
   projectName: 'laravel-chat-system', // Usually your repo name.
   themeConfig: {
     prism: {
+      additionalLanguages: ['php'],
       defaultLanguage: 'php',
-      theme: require('prism-react-renderer/themes/dracula'),
+      darkTheme,
+      theme: darkTheme
     },
     navbar: {
       title: 'Laravel Chat System',
       logo: {
         alt: 'Laravel Chat System',
-        src: 'img/logo.svg',
+        src: 'img/logo.png'
       },
       items: [
         {
@@ -30,15 +35,15 @@ module.exports = {
           to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'left',
+          position: 'left'
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/myckhel/laravel-chat-system-docs',
           label: 'GitHub',
-          position: 'right',
-        },
-      ],
+          position: 'right'
+        }
+      ]
     },
     footer: {
       style: 'dark',
@@ -48,35 +53,36 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'docs/',
-            },
-          ],
+              to: 'docs/'
+            }
+          ]
         },
         {
           title: 'Community',
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/laravel-chat-system',
-            },
-          ],
+              href:
+                'https://stackoverflow.com/questions/tagged/laravel-chat-system'
+            }
+          ]
         },
         {
           title: 'More',
           items: [
             {
               label: 'Blog',
-              to: 'blog',
+              to: 'blog'
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/myckhel/laravel-chat-system',
-            },
-          ],
-        },
+              href: 'https://github.com/myckhel/laravel-chat-system'
+            }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Laravel Chat System, Inc. Built with Docusaurus.`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} Laravel Chat System, Inc. Built with Docusaurus.`
+    }
   },
   presets: [
     [
@@ -86,18 +92,18 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/myckhel/laravel-chat-system-docs/edit/master/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/myckhel/laravel-chat-system-docs/edit/master/'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
-};
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      }
+    ]
+  ]
+}
