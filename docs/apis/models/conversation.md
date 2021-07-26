@@ -59,7 +59,7 @@ Conversation::whereNotParticipant($user)->first();
 - **`message`** | message props | `array`
 
 ```php
-$message = $conversation->createMessateWithToken(
+$message = $conversation->createMessageWithToken(
   $token,
   ['message' => 'hello', 'user_id' => $user->id]
 );
