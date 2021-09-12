@@ -10,7 +10,7 @@ slug: /apis/events/message/created
 `Myckhel\ChatSystem\Events\Message\Created`
 
 ## **Broadcasts as**
-- `message`
+- `Myckhel\\ChatSystem\\Events\\Message`
 
 ## **Broadcasts with**
 - `message`  type `Myckhel\ChatSystem\Contracts\IMessage`

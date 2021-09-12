@@ -13,12 +13,12 @@ From the frontend channel, you may listen to [Message\Created Event](../apis/eve
 Using Laravel Echo as example broadcast client
 ```js
 Echo.private(`message-created.${conversation_id}`)
-  .listen('message', (event) => {
+  .listen('Myckhel\\ChatSystem\\Events\\Message', (event) => {
     console.log(event)
   })
 // OR
 Echo.private(`message-new.user.${participant_id}`)
-  .listen('message', (event) => {
+  .listen('Myckhel\\ChatSystem\\Events\\Message', (event) => {
     console.log(event)
   })
 ```
@@ -51,7 +51,7 @@ From the frontend channel, you may listen to [Message\Events Event](../apis/even
 Using Laravel Echo as example broadcast client
 ```js
 Echo.private(`message-event.user.${participant_id}`)
-  .listen('message', (event) => {
+  .listen('Myckhel\\ChatSystem\\Events\\Message', (event) => {
     console.log(event)
   })
 ```
