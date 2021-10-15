@@ -23,7 +23,7 @@ slug: /apis/models/chatEvent
 
 Methods that build queries.
 
-### `withTrashed()`
+### `withAll()`
 
 > adds query where maker is the given user or chat event is for all participants.
 
@@ -32,7 +32,7 @@ Methods that build queries.
 - **`user`** | user to retrive chat events for. | `ChatEventMaker`
 
 ```php
-ChatEvent::withTrashed($user)->get();
+ChatEvent::withAll($user)->get();
 ```
 
 ### `notMessanger()`
