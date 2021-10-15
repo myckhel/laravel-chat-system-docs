@@ -35,7 +35,7 @@ Methods that build queries.
 ChatEvent::withAll($user)->get();
 ```
 
-### `notMessanger()`
+### `notMessenger()`
 
 > adds query where the chat event message sender is not the given user.
 
@@ -44,7 +44,7 @@ ChatEvent::withAll($user)->get();
 - **`user`** | user that should not be the chat event message sender. | `ChatEventMaker|int`
 
 ```php
-ChatEvent::notMessanger($user)->first();
+ChatEvent::notMessenger($user)->first();
 ```
 
 ## Relationships
