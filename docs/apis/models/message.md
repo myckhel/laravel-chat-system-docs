@@ -274,32 +274,6 @@ $message->reply;
 ## Collection methods
 These are methods that could be called on collection of messages.
 
-### `prependSystemMessage()`
-
-> Method to prepend messages to the collection,
-> originally created to add system message,
-> you may ignore the name as it can add any type of messages
-
-```php
-$messages = $user->messages()->get();
-
-$messages->prependSystemMessage(
-  $message1, $message2
-);
-```
-
-### `appendSystemMessage()`
-
-> Method to append messages to the collection
-
-```php
-$messages = $user->messages()->get();
-
-$messages->appendSystemMessage(
-  $message1, $message2
-);
-```
-
 ### `makeRead()`
 
 > Method to mark messages as read,
