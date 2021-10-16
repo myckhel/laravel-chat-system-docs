@@ -274,9 +274,9 @@ $conversation->unread($user)->get();
 $conversation->undelivered($user)->get();
 ```
 
-### `notMsgEvents()`
+### `doesntHaveChatEvents()`
 
-> Conversation has many messages where given user is not the message sender.
+> Conversation has many messages where given user is not the event emitter.
 
 #### @Params
 
@@ -284,7 +284,7 @@ $conversation->undelivered($user)->get();
 - **`type`** | message event type message should not have. | `enum(read|deliver|delete)`
 
 ```php
-$conversation->notMsgEvents($user, 'read')->get();
+$conversation->doesntHaveChatEvents($user, 'read')->get();
 ```
 
 ### `author()`
