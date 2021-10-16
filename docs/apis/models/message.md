@@ -51,7 +51,7 @@ Message::whereReply([
 ])->get();
 ```
 
-### `notMsgEvents()`
+### `whereDoesntHaveChatEvents()`
 
 > adds query where message doesn't have chatEvents
 
@@ -62,7 +62,7 @@ Message::whereReply([
 - **`?conversationScope`** | callback to get the conversation query object. | `null|Closure`
 
 ```php
-Message::notMsgEvents(
+Message::whereDoesntHaveChatEvents(
   'read',
   $user,
   fn ($query) => $query->where('created_at', '<', NOW())
