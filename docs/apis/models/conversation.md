@@ -155,7 +155,7 @@ $conversation->makeDelete(user: $user, row: false, all: false);
 $conversation->makeRead(user: $user, row: true, all: false);
 ```
 
-### `makeDelivered()`
+### `makeDeliver()`
 
 > create a chatEvent of type `deliver` for the `conversation` through the given `user`
 
@@ -172,7 +172,7 @@ $conversation->makeRead(user: $user, row: true, all: false);
 - **`?all`** | specify whether to apply event for all. this should set the chat event column to `true|false` | `bool`
 
 ```php
-$conversation->makeDelivered(user: $user, row: true, all: false);
+$conversation->makeDeliver(user: $user, row: true, all: false);
 ```
 
 ### `makeChatEvent()`
@@ -298,7 +298,7 @@ $conversation->author;
 ## Collection methods
 These are methods that could be called on collection of messages.
 
-### `makeDelivered()`
+### `makeDeliver()`
 
 > Method to mark conversations as delivered,
 
@@ -309,5 +309,5 @@ These are methods that could be called on collection of messages.
 ```php
 $messages = $user->messages()->get();
 
-$messages->makeDelivered(user: $user);
+$messages->makeDeliver(user: $user);
 ```
