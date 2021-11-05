@@ -26,7 +26,7 @@ Methods that build queries.
 
 #### @Params
 
-- **`?user`** | pass user arg for query to exclude messages deleted by the user. | `int|ChatEventMaker|null`
+- **`?user`** | pass user arg for query to exclude messages deleted by the user. | `int|IChatEventMaker|null`
 
 ```php
 Conversation::whereHasLastMessage($user)->get();
@@ -38,7 +38,7 @@ Conversation::whereHasLastMessage($user)->get();
 
 #### @Params
 
-- **`?user`** | pass user arg to query conversation where doesn't have participant equals the user. | `int|ChatEventMaker`
+- **`?user`** | pass user arg to query conversation where doesn't have participant equals the user. | `int|IChatEventMaker`
 
 ```php
 Conversation::whereNotParticipant($user)->first();
@@ -74,7 +74,7 @@ $message = $conversation->createMessageWithToken(
 
 #### @Params
 
-- **`user`** | participant to add | `Myckhel\ChatSystem\Contracts\ChatEventMaker`
+- **`user`** | participant to add | `Myckhel\ChatSystem\Contracts\IChatEventMaker`
 - **`message`** | message text for the activity message that may be created | `string`
 
 ```php
@@ -90,7 +90,7 @@ $participant = $conversation->addParticipant($user, message: 'Someone joined the
 
 #### @Params
 
-- **`user`** | participant to remove | `Myckhel\ChatSystem\Contracts\ChatEventMaker`
+- **`user`** | participant to remove | `Myckhel\ChatSystem\Contracts\IChatEventMaker`
 - **`message`** | message text for the activity message that may be created | `string`
 
 ```php
@@ -256,7 +256,7 @@ $conversation->messages()->get();
 
 #### @Params
 
-- **`user`** | user to query unread messages for. | `int|ChatEventMaker`
+- **`user`** | user to query unread messages for. | `int|IChatEventMaker`
 
 ```php
 $conversation->unread($user)->get();
@@ -268,7 +268,7 @@ $conversation->unread($user)->get();
 
 #### @Params
 
-- **`user`** | user to query unread messages for. | `int|ChatEventMaker`
+- **`user`** | user to query unread messages for. | `int|IChatEventMaker`
 
 ```php
 $conversation->undelivered($user)->get();
@@ -280,7 +280,7 @@ $conversation->undelivered($user)->get();
 
 #### @Params
 
-- **`user`** | user to query unread messages for. | `int|ChatEventMaker`
+- **`user`** | user to query unread messages for. | `int|IChatEventMaker`
 - **`type`** | message event type message should not have. | `enum(read|deliver|delete)`
 
 ```php
@@ -304,7 +304,7 @@ These are methods that could be called on collection of messages.
 
 #### @Params
 
-- **`user`** | user to assign chat events to. | `ChatEventMaker`
+- **`user`** | user to assign chat events to. | `IChatEventMaker`
 
 ```php
 $messages = $user->messages()->get();

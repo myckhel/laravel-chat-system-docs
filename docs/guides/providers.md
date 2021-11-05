@@ -129,7 +129,7 @@ use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Myckhel\ChatSystem\Policies\ConversationPolicy as CSCP;
 use Myckhel\ChatSystem\Contracts\IConversation;
-use Myckhel\ChatSystem\Contracts\ChatEventMaker;
+use Myckhel\ChatSystem\Contracts\IChatEventMaker;
 
 class ConversationPolicy extends CSCP
 {
@@ -142,7 +142,7 @@ class ConversationPolicy extends CSCP
      * @param  \App\Models\Conversation  $conversation
      * @return mixed
      */
-    public function view(ChatEventMaker $user, IConversation $conversation)
+    public function view(IChatEventMaker $user, IConversation $conversation)
     {
       return in_array($conversation->type, ['issue', 'group'])
         || $user->relatedToConversation($conversation);
@@ -155,7 +155,7 @@ class ConversationPolicy extends CSCP
      * @param  \App\Models\Conversation  $conversation
      * @return mixed
      */
-    public function delete(ChatEventMaker $user, IConversation $conversation)
+    public function delete(IChatEventMaker $user, IConversation $conversation)
     {
       return $user->relatedToConversation($conversation);
     }

@@ -29,7 +29,7 @@ Methods that build queries.
 
 #### @Params
 
-- **`user`** | user to retrive chat events for. | `ChatEventMaker`
+- **`user`** | user to retrive chat events for. | `IChatEventMaker`
 
 ```php
 ChatEvent::withAll($user)->get();
@@ -41,7 +41,7 @@ ChatEvent::withAll($user)->get();
 
 #### @Params
 
-- **`user`** | user that should not be the chat event message sender. | `ChatEventMaker|int`
+- **`user`** | user that should not be the chat event message sender. | `IChatEventMaker|int`
 
 ```php
 ChatEvent::notMessenger($user)->first();

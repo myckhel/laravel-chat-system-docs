@@ -30,7 +30,7 @@ Message Model Query Builder APIs
 
 #### @Params
 
-- **`?user`** | message sender to exclude. | `int|ChatEventMaker|null`
+- **`?user`** | message sender to exclude. | `int|IChatEventMaker|null`
 
 ```php
 Message::whereNotSender($user)->get();
@@ -58,7 +58,7 @@ Message::whereReply([
 #### @Params
 
 - **`?type`** | adds condition where = message chatEvents.type. | `string(read|delete|deliver)`
-- **`?user`** | adds condition where user = message chatEvents maker | `int|ChatEventMaker|null`
+- **`?user`** | adds condition where user = message chatEvents maker | `int|IChatEventMaker|null`
 - **`?conversationScope`** | callback to get the conversation query object. | `null|Closure`
 
 ```php
@@ -75,7 +75,7 @@ Message::whereDoesntHaveChatEvents(
 
 #### @Params
 
-- **`user`** | adds condition where user = participant | `int|ChatEventMaker|null`
+- **`user`** | adds condition where user = participant | `int|IChatEventMaker|null`
 
 ```php
 Message::whereRelatedToUser(

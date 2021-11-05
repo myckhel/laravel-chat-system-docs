@@ -6,7 +6,7 @@ slug: /guides/chatEvent
 ---
 
 ## Creating chatEvent
-You may create chat events by a `ChatEventMaker` model for `Message` or `Conversation` models.
+You may create chat events by a `IChatEventMaker` model for `Message` or `Conversation` models.
 for example, creating a read event for a particular message.
 ```php
 $user->chatEventMakers()
