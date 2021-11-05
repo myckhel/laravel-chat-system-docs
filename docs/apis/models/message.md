@@ -69,7 +69,7 @@ Message::whereDoesntHaveChatEvents(
 )->get();
 ```
 
-### `whereRelatedToUser()`
+### `whereRelatedTo()`
 
 > adds query where message has participant = user
 
@@ -78,7 +78,7 @@ Message::whereDoesntHaveChatEvents(
 - **`user`** | adds condition where user = participant | `int|IChatEventMaker|null`
 
 ```php
-Message::whereRelatedToUser(
+Message::whereRelatedTo(
   $user,
 )->get();
 ```
