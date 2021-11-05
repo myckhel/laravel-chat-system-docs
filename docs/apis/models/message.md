@@ -196,7 +196,7 @@ $message = $user->messages()->first();
 $message->makeRead($user);
 ```
 
-### `makeDelivered()`
+### `makeDeliver()`
 
 > create a chatEvent of type `deliver` for the `message` through the given `user`
 
@@ -212,7 +212,7 @@ $message->makeRead($user);
 
 ```php
 $message = $user->messages()->first();
-$message->makeDelivered($user);
+$message->makeDeliver($user);
 ```
 
 ### `participants()`
@@ -297,7 +297,7 @@ $messages = $user->messages()->get();
 $messages->makeDelete(user: $user, all: false);
 ```
 
-### `makeDelivered()`
+### `makeDeliver()`
 
 > Method to mark messages as delivered,
 > pass a user arg to specify the user which messages are being delivered to. 
@@ -305,7 +305,7 @@ $messages->makeDelete(user: $user, all: false);
 ```php
 $messages = $user->messages()->get();
 
-$messages->makeDelivered(user: $user, all: false);
+$messages->makeDeliver(user: $user, all: false);
 ```
 
 ### `makeChatEvent()`
