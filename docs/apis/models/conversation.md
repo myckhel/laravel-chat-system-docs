@@ -97,7 +97,7 @@ $participant = $conversation->addParticipant($user, message: 'Someone joined the
 $participant = $conversation->addParticipant($user, message: 'Someone joined the conversation');
 ```
 
-### `createMessageActivity()`
+### `createActivityMessage()`
 
 > Creates an activity message.
 
@@ -109,7 +109,7 @@ $participant = $conversation->addParticipant($user, message: 'Someone joined the
 - **`message`** | message props | `array`
 
 ```php
-$message = $conversation->createMessageActivity(message: [
+$message = $conversation->createActivityMessage(message: [
   'user_id' => $user->id,
   'message' => 'Hello'
 ]);

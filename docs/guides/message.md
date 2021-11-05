@@ -57,7 +57,7 @@ An activity message can be used to hold a single event of a conversation. A user
 ```php
 $conversation = $user->conversations($conversation_id)->first();
 
-$conversation->createMessageActivity([
+$conversation->createActivityMessage([
   'user_id'         => $user->id,
   'message'         => 'Someone left the conversation',
 ]);
