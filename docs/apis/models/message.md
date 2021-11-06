@@ -69,6 +69,48 @@ Message::whereDoesntHaveChatEvents(
 )->get();
 ```
 
+### `whereNotReadBy()`
+
+> adds query where message is not read by the given user
+
+#### @Params
+
+- **`?user`** | adds condition where user = message chatEvents maker | `int|IChatEventMaker|null`
+
+```php
+Message::whereNotReadBy(
+  $user,
+)->get();
+```
+
+### `whereNotDeliveredTo()`
+
+> adds query where message is not delivered to the given user
+
+#### @Params
+
+- **`?user`** | adds condition where user = message chatEvents maker | `int|IChatEventMaker|null`
+
+```php
+Message::whereNotDeliveredTo(
+  $user,
+)->get();
+```
+
+### `whereNotDeletedBy()`
+
+> adds query where message is not deleted by the given user
+
+#### @Params
+
+- **`?user`** | adds condition where user = message chatEvents maker | `int|IChatEventMaker|null`
+
+```php
+Message::whereNotDeletedBy(
+  $user,
+)->get();
+```
+
 ### `whereRelatedTo()`
 
 > adds query where message has participant = user

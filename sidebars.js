@@ -1,65 +1,87 @@
 module.exports = {
   docs: [
     {
-      type: 'category',
-      label: 'Chat System',
+      type: "category",
+      label: "Chat System",
       collapsed: false,
       items: [
         {
-          type: 'doc',
-          id: 'intro'
+          type: "doc",
+          id: "intro",
         },
         {
-          type: 'doc',
-          id: 'install'
+          type: "doc",
+          id: "install",
         },
         {
-          type: 'doc',
-          id: 'require'
-        }
-      ]
+          type: "doc",
+          id: "require",
+        },
+      ],
     },
     {
       collapsed: false,
-      type: 'category',
-      label: 'Guides',
+      type: "category",
+      label: "Guides",
       items: [
-        'guides/configure',
-        'guides/providers',
-        'guides/models',
-        'guides/guides.routes',
-        'guides/guides.conversation',
-        'guides/guides.message',
-        'guides/guides.chatEvent',
-        'guides/broadcasts'
-      ]
+        "guides/configure",
+        "guides/providers",
+        "guides/models",
+        "guides/guides.routes",
+        "guides/guides.conversation",
+        "guides/guides.message",
+        "guides/guides.chatEvent",
+        "guides/broadcasts",
+      ],
     },
     {
       collapsed: false,
-      type: 'category',
-      label: 'Api Ref',
+      type: "category",
+      label: "Api Ref",
       items: [
         {
           collapsed: false,
-          type: 'category',
-          label: 'Models',
+          type: "category",
+          label: "Models",
           items: [
-            'apis/models/message',
-            'apis/models/conversation',
-            'apis/models/chatEvent'
-          ]
+            "apis/models/message",
+            "apis/models/conversation",
+            "apis/models/chatEvent",
+          ],
         },
         {
-          type: 'category',
-          label: 'Events',
+          type: "category",
+          label: "Traits",
           collapsed: false,
           items: [
-            'apis/events/message/messageEvent',
-            'apis/events/message/messageCreated'
-          ]
+            {
+              type: "category",
+              label: "ChatEvent",
+              collapsed: false,
+              items: [
+                "apis/traits/chatEvent/canMakeChatEvent",
+                "apis/traits/chatEvent/hasChatEvent",
+              ],
+            },
+            {
+              type: "category",
+              label: "Message",
+              collapsed: false,
+              items: ["apis/traits/message/hasMessage"],
+            },
+          ],
         },
-        'apis/chatsystem'
-      ]
-    }
-  ]
-}
+        {
+          type: "category",
+          label: "Events",
+          collapsed: false,
+          items: [
+            "apis/events/message/messageEvent",
+            "apis/events/message/messageCreated",
+          ],
+        },
+        "apis/chatsystem",
+      ],
+    },
+  ],
+};
