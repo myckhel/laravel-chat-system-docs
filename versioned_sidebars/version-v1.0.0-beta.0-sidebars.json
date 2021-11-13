@@ -1,0 +1,140 @@
+{
+  "version-v1.0.0-beta.0/docs": [
+    {
+      "collapsed": false,
+      "type": "category",
+      "label": "Chat System",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/intro"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/install"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/require"
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "type": "category",
+      "label": "Guides",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/configure"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/providers"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/models"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/guides.routes"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/guides.conversation"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/guides.message"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/guides.chatEvent"
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/guides/broadcasts"
+        }
+      ]
+    },
+    {
+      "collapsed": false,
+      "type": "category",
+      "label": "Api Ref",
+      "items": [
+        {
+          "collapsed": false,
+          "type": "category",
+          "label": "Models",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-v1.0.0-beta.0/apis/models/message"
+            },
+            {
+              "type": "doc",
+              "id": "version-v1.0.0-beta.0/apis/models/conversation"
+            },
+            {
+              "type": "doc",
+              "id": "version-v1.0.0-beta.0/apis/models/chatEvent"
+            }
+          ]
+        },
+        {
+          "collapsed": false,
+          "type": "category",
+          "label": "Traits",
+          "items": [
+            {
+              "collapsed": false,
+              "type": "category",
+              "label": "ChatEvent",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "version-v1.0.0-beta.0/apis/traits/chatEvent/canMakeChatEvent"
+                },
+                {
+                  "type": "doc",
+                  "id": "version-v1.0.0-beta.0/apis/traits/chatEvent/hasChatEvent"
+                }
+              ]
+            },
+            {
+              "collapsed": false,
+              "type": "category",
+              "label": "Message",
+              "items": [
+                {
+                  "type": "doc",
+                  "id": "version-v1.0.0-beta.0/apis/traits/message/hasMessage"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "collapsed": false,
+          "type": "category",
+          "label": "Events",
+          "items": [
+            {
+              "type": "doc",
+              "id": "version-v1.0.0-beta.0/apis/events/message/messageEvent"
+            },
+            {
+              "type": "doc",
+              "id": "version-v1.0.0-beta.0/apis/events/message/messageCreated"
+            }
+          ]
+        },
+        {
+          "type": "doc",
+          "id": "version-v1.0.0-beta.0/apis/chatsystem"
+        }
+      ]
+    }
+  ]
+}
