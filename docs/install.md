@@ -42,3 +42,18 @@ factories files should be copied to the `database/factories` directory
 php artisan vendor:publish --provider="Myckhel\ChatSystem\ChatSystemServiceProvider"
 ```
 all resources files should be copied to the respective directories
+
+## `Setup User Model`
+In order to start working with chat-system, you need to setup your User model by implementing **IChatEventMaker** Interface and using the [HasMessage](/apis/traits/message/hasMessage.md), [CanMakeChatEvent](/apis/traits/chatEvent/canMakeChatEvent.md) Traits.
+
+```php
+use Myckhel\ChatSystem\Traits\Message\HasMessage;
+use Myckhel\ChatSystem\Traits\ChatEvent\CanMakeChatEvent;
+use Myckhel\ChatSystem\Contracts\IChatEventMaker;
+
+
+class User implements IChatEventMaker
+{
+    use HasMessage, CanMakeChatEvent;
+...
+```
